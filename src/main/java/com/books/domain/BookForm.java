@@ -8,9 +8,7 @@ import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+
 
 
 public class BookForm extends FormLayout {
@@ -27,6 +25,7 @@ public class BookForm extends FormLayout {
     private MainView mainView;
 
     public BookForm(MainView mainView) {
+        this.mainView = mainView;
         type.setItems(BookType.values());
         HorizontalLayout buttons = new HorizontalLayout(save, delete);
         save.addThemeVariants(ButtonVariant.LUMO_PRIMARY);

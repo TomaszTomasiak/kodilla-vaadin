@@ -11,7 +11,6 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.Route;
 
-
 @Route
 public class MainView extends VerticalLayout {
 
@@ -34,6 +33,7 @@ public class MainView extends VerticalLayout {
             form.setBook(new Book()); //dodajemy nowy obiekt do formularza
         });
         HorizontalLayout toolbar = new HorizontalLayout(filter, addNewBook);
+        add(toolbar);
 
         HorizontalLayout mainContent = new HorizontalLayout(grid, form);
         mainContent.setSizeFull();
