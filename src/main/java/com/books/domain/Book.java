@@ -1,7 +1,5 @@
 package com.books.domain;
 
-import com.books.BookType;
-
 import java.util.Objects;
 
 public class Book {

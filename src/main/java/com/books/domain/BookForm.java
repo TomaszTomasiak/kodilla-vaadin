@@ -1,6 +1,5 @@
 package com.books.domain;
 
-import com.books.BookType;
 import com.books.MainView;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -9,6 +8,10 @@ import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 
 public class BookForm extends FormLayout {
 
@@ -16,10 +19,8 @@ public class BookForm extends FormLayout {
     private TextField author = new TextField("Author");
     private TextField publicationYear = new TextField("Publication year");
     private ComboBox<BookType> type = new ComboBox<>("Book type");
-
     private Button save = new Button("Save");
     private Button delete = new Button("Delete");
-
     private Binder<Book> binder = new Binder<>(Book.class);
     private BookService service = BookService.getInstance();
 

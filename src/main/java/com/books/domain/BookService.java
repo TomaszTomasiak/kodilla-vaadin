@@ -1,6 +1,5 @@
 package com.books.domain;
 
-import com.books.BookType;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
