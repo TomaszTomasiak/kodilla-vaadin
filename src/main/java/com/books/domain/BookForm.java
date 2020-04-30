@@ -38,15 +38,16 @@ public class BookForm extends FormLayout {
     private void save() {
         Book book = binder.getBean();
         service.save(book);
-        mainView.refresh();
         setBook(null);
+        mainView.refresh();
     }
 
     private void delete() {
         Book book = binder.getBean();
         service.delete(book);
-        mainView.refresh();
         setBook(null);
+        mainView.refresh();
+
     }
 
     public void setBook(Book book) {

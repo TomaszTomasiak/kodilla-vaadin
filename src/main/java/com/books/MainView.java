@@ -33,13 +33,12 @@ public class MainView extends VerticalLayout {
             form.setBook(new Book()); //dodajemy nowy obiekt do formularza
         });
         HorizontalLayout toolbar = new HorizontalLayout(filter, addNewBook);
-        add(toolbar);
 
         HorizontalLayout mainContent = new HorizontalLayout(grid, form);
         mainContent.setSizeFull();
         grid.setSizeFull();
 
-        add(filter, mainContent);
+        add(toolbar, mainContent);
         form.setBook(null);
         setSizeFull();
         refresh();
